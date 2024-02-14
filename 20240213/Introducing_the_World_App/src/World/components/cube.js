@@ -1,3 +1,15 @@
-import { BoxBufferGeometry, Mesh, MeshBasicMaterial } from 'https://cdn.skypack.dev/three@0.136.2';
+import { RingGeometry, Mesh, MeshBasicMaterial } from 'three';
 
-// To do...
+function createCube() {
+    const geometry = new RingGeometry;
+
+    const material = new MeshBasicMaterial();
+
+    const cube = new Mesh(geometry, material);
+
+    cube.position.set(0, 2, 0);
+
+    return cube;
+}
+
+export { createCube };
