@@ -13,8 +13,12 @@ class Resizer {
 
     window.addEventListener("resize", () => {
       setSize(container, camera, renderer);
+      
+      this.onResize();
     });
   }
+
+  onResize() {}
 }
 
 export { Resizer };

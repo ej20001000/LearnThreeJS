@@ -23,6 +23,11 @@ class World {
     scene.add(cube, light);
 
     const resizer = new Resizer(container, camera, renderer);
+
+    resizer.onResize = () => {
+      this.render();
+    }
+
   }
 
   render() {
