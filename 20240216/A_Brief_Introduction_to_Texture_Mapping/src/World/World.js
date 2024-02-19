@@ -32,13 +32,13 @@ class World {
     })
     
     const cube = createCube();
-    const light = createLights();
+    const { ambientLight, mainLight} = createLights();
     
     // controls.target.copy(cube.position);
 
     loop.updatables.push(controls);
 
-    scene.add(cube, light);
+    scene.add(cube, ambientLight, mainLight);
 
     const resizer = new Resizer(container, camera, renderer);
   }
